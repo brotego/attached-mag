@@ -50,4 +50,4 @@ JWT_SECRET=your-jwt-secret
 ## Deployment
 
 - Frontend: Deployed on Vercel
-- Strapi: Deployed on DigitalOcean 
+- Strapi: Deployed on DigitalOcean # Attatched-Mag
