@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'ApfelGrotezk-Regular';
+  src: url('/fonts/ApfelGrotezk-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NHaasGroteskDSStd-55Rg';
+  src: url('/fonts/NHaasGroteskDSStd-55Rg.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Category fonts */
+@font-face {
+  font-family: 'PinyonScript';
+  src: url('/fonts/PinyonScript-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HomemadeApple';
+  src: url('/fonts/HomemadeApple-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'AmadorGothic';
+  src: url('/fonts/amador-gothicc.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fox21';
+  src: url('/fonts/news/fox21.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'NewHeterodoxMono';
+  src: url('/fonts/NewHeterodoxMono-Book (1).otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Aujournuit';
+  src: url('/fonts/Aujournuit-Regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} 

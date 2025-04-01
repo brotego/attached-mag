@@ -1,0 +1,130 @@
+.footer {
+  padding: 20px;
+  width: 100%;
+  font-size: 14px;
+  font-family: 'NHaasGroteskDSStd-55Rg', sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Logo section */
+.logoSection {
+  display: flex;
+  align-items: center;
+}
+
+.logoLink {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #000;
+  padding: 12px 15px;
+  background-color: white;
+  font-size: 14px;
+  margin-right: 0;
+}
+
+.copyright {
+  margin-right: 5px;
+}
+
+/* Links section */
+.linksSection {
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
+  margin-right: auto;
+}
+
+.footerLink {
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #000;
+  padding: 10px 15px;
+  background-color: white;
+  font-size: 12px;
+  display: inline-block;
+}
+
+.footerLink:hover {
+  background-color: #c0c0c0;
+}
+
+/* Search section */
+.searchSection {
+  display: flex;
+  align-items: center;
+}
+
+.searchBox {
+  border: 1px solid #000;
+  background-color: white;
+  height: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.searchInput {
+  border: none;
+  background-color: transparent;
+  padding: 0 15px;
+  width: 200px;
+  height: 100%;
+  font-size: 12px;
+  outline: none;
+  font-family: 'NHaasGroteskDSStd-55Rg', sans-serif;
+}
+
+.searchInput::placeholder {
+  color: #000;
+}
+
+.searchButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #000;
+  border-left: none;
+  background-color: white;
+  cursor: pointer;
+}
+
+.searchButton:hover {
+  background-color: #c0c0c0;
+}
+
+.searchIcon {
+  width: 20px;
+  height: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .linksSection {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 0;
+  }
+  
+  .searchBox {
+    width: 100%;
+  }
+  
+  .searchInput {
+    width: 100%;
+  }
+} 

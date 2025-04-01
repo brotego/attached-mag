@@ -1,0 +1,78 @@
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.backgroundImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 6rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  -webkit-text-stroke: 2px white;
+  text-decoration: none;
+}
+
+.description {
+  font-family: 'NHaasGroteskDSStd-55Rg', sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 800px;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+}
+
+/* Remove underlines from all links */
+.hero a {
+  text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 400px;
+  }
+
+  .title {
+    font-size: 3rem;
+    -webkit-text-stroke: 1px white;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+} 

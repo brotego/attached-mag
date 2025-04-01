@@ -1,0 +1,126 @@
+.nav {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: linear-gradient(to bottom, 
+    rgba(255, 255, 255, 0.4) 0%,
+    rgba(255, 25w5, 255, 0.4) 80%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  box-shadow: 0 8px 32px -8px rgba(255, 255, 255, 0.1);
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.leftMenu, .rightMenu {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.menuItem {
+  text-decoration: none;
+  color: #000;
+  font-family: 'NHaasGroteskDSStd-55Rg', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  padding: 8px 12px;
+  border: 1px solid #000;
+  background: white;
+}
+
+.menuItem:hover {
+  opacity: 0.7;
+}
+
+.active {
+  opacity: 0.7;
+}
+
+.logoLink {
+  text-decoration: none;
+  color: #000;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 8px 16px;
+  border: 1px solid #000;
+  background: white;
+}
+
+.logo {
+  font-family: 'NHaasGroteskDSStd-55Rg', sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+}
+
+.rightSection {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.searchButton {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+  color: #000;
+  font-family: 'NHaasGroteskDSStd-55Rg', sans-serif;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  padding: 8px 12px;
+  border: 1px solid #000;
+  background: white;
+}
+
+.searchButton:hover {
+  opacity: 0.7;
+}
+
+.searchIcon {
+  width: 14px;
+  height: 14px;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    height: auto;
+    padding: 15px;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .leftMenu, .rightMenu {
+    gap: 15px;
+  }
+
+  .logoLink {
+    position: relative;
+    left: auto;
+    transform: none;
+    margin: 10px 0;
+  }
+
+  .rightSection {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+} 

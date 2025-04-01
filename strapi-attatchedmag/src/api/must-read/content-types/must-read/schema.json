@@ -1,0 +1,36 @@
+{
+  "kind": "singleType",
+  "collectionName": "must_reads",
+  "info": {
+    "singularName": "must-read",
+    "pluralName": "must-reads",
+    "displayName": "Must Read"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "blocks"
+    },
+    "Image": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "ButtonText": {
+      "type": "string"
+    },
+    "Buttonurl": {
+      "type": "string"
+    }
+  }
+}
