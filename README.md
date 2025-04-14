@@ -52,3 +52,4 @@ JWT_SECRET=your-jwt-secret
 - Frontend: Deployed on Vercel
 - Strapi: Deployed on DigitalOcean # Attatched-Mag
 # Attatched-Mag
+# attached-mag
