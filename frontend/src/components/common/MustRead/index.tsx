@@ -5,18 +5,34 @@ import Link from 'next/link';
 import styles from './MustRead.module.css';
 import { getStrapiMedia } from '../../../lib/media';
 
+interface Block {
+  type: string;
+  children: {
+    type: string;
+    text: string;
+  }[];
+}
+
 interface MustReadData {
   id: number;
   Title: string;
-  Description: Array<{ type: string; children: Array<{ text: string }> }>;
+  Description: Block[];
+  Image: {
+    data: {
+      id: number;
+      attributes: {
+        name: string;
+        url: string;
+        width: number;
+        height: number;
+      }
+    }
+  } | null;
   ButtonText: string;
   Buttonurl: string;
-  Image: {
+  author?: {
     id: number;
     name: string;
-    url: string;
-    width: number;
-    height: number;
   };
 }
 
@@ -24,33 +40,66 @@ interface MustReadProps {
   data: MustReadData | null;
 }
 
+function renderBlocks(blocks: Block[]) {
+  return blocks.map((block, index) => {
+    if (block.type === 'paragraph') {
+      return (
+        <p key={index} className={styles.paragraph}>
+          {block.children.map((child, childIndex) => (
+            <span key={childIndex}>{child.text}</span>
+          ))}
+        </p>
+      );
+    }
+    return null;
+  });
+}
+
 export default function MustRead({ data }: MustReadProps) {
   if (!data) {
-    return null; // or return a loading state or placeholder
+    return null;
   }
 
-  const { Title, Description, ButtonText, Buttonurl, Image: ImageData } = data;
-  const imageUrl = getStrapiMedia(ImageData?.url);
-  const descriptionText = Description?.[0]?.children?.[0]?.text || '';
+  const imageUrl = data.Image?.data ? 
+    getStrapiMedia(data.Image.data.attributes.url) : '';
 
   return (
     <section className={styles.container}>
       <div className={styles.wrapper}>
-        <div className={styles.imageWrapper}>
-          <Image
-            src={imageUrl || ''}
-            alt={Title}
-            width={800}
-            height={533}
-            priority
-          />
-        </div>
-        <div className={styles.content}>
-          <h2 className={styles.title}>{Title}</h2>
-          <p className={styles.description}>{descriptionText}</p>
-          <Link href={Buttonurl} className={styles.button}>
-            {ButtonText}
-          </Link>
+        <div className={styles.grid}>
+          {imageUrl && (
+            <div className={styles.imageColumn}>
+              <div className={styles.imageWrapper}>
+                <Image
+                  src={imageUrl}
+                  alt={data.Title}
+                  fill
+                  priority
+                  className={styles.image}
+                />
+              </div>
+            </div>
+          )}
+          
+          <div className={styles.contentColumn}>
+            <h2 className={styles.title}>{data.Title}</h2>
+            <div className={styles.description}>
+              {renderBlocks(data.Description)}
+            </div>
+            
+            {data.ButtonText && data.Buttonurl && (
+              <Link 
+                href={data.Buttonurl}
+                className={styles.button}
+              >
+                {data.ButtonText}
+              </Link>
+            )}
+
+            {data.author && (
+              <p className={styles.author}>By {data.author.name}</p>
+            )}
+          </div>
         </div>
       </div>
     </section>

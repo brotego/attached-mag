@@ -1,0 +1,113 @@
+.main {
+  min-height: 100vh;
+}
+
+/* Category-specific backgrounds and text colors */
+.news.main {
+  background-color: #F9EEE5;
+  color: black;
+}
+
+.culture.main {
+  background-color: #E8E786;
+  color: #6B2238;
+}
+
+.review.main {
+  background-color: #B7D9FE;
+  color: #6B2238;
+}
+
+.fiction.main {
+  background-color: #6B2238;
+  color: #E8E786;
+}
+
+.style.main {
+  background-color: black;
+  color: white;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.header {
+  text-align: center;
+  margin: 2rem 0 4rem 0;
+}
+
+.title {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.2;
+}
+
+/* Category-specific title styles */
+.style .title {
+  font-family: 'DearCamille Vector', sans-serif;
+  color: white;
+}
+
+.news .title {
+  font-family: 'HandAndHeart-Script', sans-serif;
+  color: black;
+}
+
+.fiction .title {
+  font-family: 'Tarot', sans-serif;
+  color: #E8E786;
+}
+
+.review .title {
+  font-family: 'TheFoxDen', sans-serif;
+  color: #6B2238;
+}
+
+.culture .title {
+  font-family: 'irishand-regular', sans-serif;
+  color: #6B2238;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.empty {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+.empty h1 {
+  font-family: 'Aujournuit', sans-serif;
+  font-size: 2rem;
+  color: #4A2B2B;
+  margin-bottom: 1rem;
+}
+
+.empty p {
+  font-family: 'NHaasGroteskDSStd-55Rg', sans-serif;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+} 

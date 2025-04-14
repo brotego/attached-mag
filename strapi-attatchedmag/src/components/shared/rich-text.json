@@ -5,10 +5,23 @@
     "icon": "align-justify",
     "description": ""
   },
-  "options": {},
+  "options": {
+    "richtext": {
+      "toolbar": [
+        "bold",
+        "italic",
+        "underline",
+        "link",
+        "bulletList",
+        "numberList",
+        "blockquote"
+      ]
+    }
+  },
   "attributes": {
     "body": {
-      "type": "richtext"
+      "type": "richtext",
+      "required": false
     }
   }
 }

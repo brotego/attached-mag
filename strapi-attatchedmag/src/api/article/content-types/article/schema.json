@@ -58,13 +58,6 @@
     "is_featured": {
       "type": "boolean",
       "default": false
-    },
-    "featured_set": {
-      "type": "enumeration",
-      "enum": [
-        "first",
-        "second"
-      ]
     }
   }
 }

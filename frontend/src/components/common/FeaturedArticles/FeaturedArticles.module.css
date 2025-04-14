@@ -11,6 +11,14 @@
   margin: 0 auto;
 }
 
+.secondSection {
+  margin-top: 4rem;
+}
+
+.secondSection > .grid {
+  margin-top: 4rem;
+}
+
 .article {
   display: flex;
   flex-direction: column;
@@ -27,7 +35,7 @@
 .imageWrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 3/2;
+  aspect-ratio: 4/3;
   overflow: hidden;
   cursor: pointer;
 }
@@ -48,7 +56,7 @@
   top: 1.4rem;
   left: 1rem;
   z-index: 2;
-  max-width: 60px;
+  max-width: 80px;
   height: auto;
   transform: rotate(-20deg);
   pointer-events: none;
@@ -78,6 +86,27 @@
   word-wrap: break-word;
 }
 
+/* Category-specific title styles */
+.style .title {
+  font-family: 'DearCamille Vector', sans-serif !important;
+}
+
+.news .title {
+  font-family: 'HandAndHeart-Script', sans-serif !important;
+}
+
+.fiction .title {
+  font-family: 'Tarot', sans-serif !important;
+}
+
+.review .title {
+  font-family: 'TheFoxDen', sans-serif !important;
+}
+
+.culture .title {
+  font-family: 'irishand-regular', sans-serif !important;
+}
+
 .author {
   font-family: 'ApfelGrotezk-Regular', sans-serif;
   font-size: 0.875rem;
@@ -98,27 +127,6 @@
 /* Remove underlines from all links */
 .article a {
   text-decoration: none;
-}
-
-/* Category-specific styles */
-.culture .title {
-  font-family: 'PinyonScript', cursive;
-}
-
-.fiction .title {
-  font-family: 'HomemadeApple', cursive;
-}
-
-.news .title {
-  font-family: 'Fox21', sans-serif;
-}
-
-.review .title {
-  font-family: 'NewHeterodoxMono', monospace;
-}
-
-.style .title {
-  font-family: 'Aujournuit', sans-serif;
 }
 
 /* Category hover effects */

@@ -1,47 +1,51 @@
 .container {
   width: 100%;
   background-color: #E8E786;
-  padding: 4rem 1rem;
+  padding: 0;
 }
 
 .wrapper {
   max-width: 1600px;
   margin: 0 auto;
+  width: 100%;
+}
+
+.grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
+  min-height: 600px;
+}
+
+.imageColumn {
+  position: relative;
+  height: 100%;
 }
 
 .imageWrapper {
   position: relative;
   width: 100%;
+  height: 100%;
+  min-height: 600px;
 }
 
-.imageWrapper img {
-  position: relative !important;
-  width: 100% !important;
-  height: auto !important;
+.image {
+  object-fit: cover;
 }
 
-.content {
+.contentColumn {
+  padding: 4rem;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 1.5rem;
-  text-align: center;
-  align-items: center;
-  max-width: 700px;
-  margin: 0 auto;
-  padding-right: 30px;
 }
 
 .title {
-  font-family: 'Bubblegum Sans', cursive;
+  font-family: 'TheStockholmFont', sans-serif;
   font-size: clamp(2.5rem, 5vw, 4rem);
   line-height: 1;
   color: #4A2B2B;
-  width: 100%;
-  text-decoration: none;
+  margin-bottom: 1rem;
 }
 
 .description {
@@ -49,43 +53,57 @@
   font-size: 1rem;
   line-height: 1.6;
   color: #4A2B2B;
-  width: 100%;
-  text-align: left;
-  text-decoration: none;
+  max-width: 600px;
+}
+
+.paragraph {
+  margin-bottom: 1rem;
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
 }
 
 .button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  display: inline-block;
+  padding: 1rem 2rem;
+  margin-top: 1rem;
   background-color: #4A2B2B;
   color: white;
-  padding: 0.75rem 2rem;
-  border-radius: 0.5rem;
-  font-weight: 500;
-  font-size: 1rem;
-  width: fit-content;
-  transition: background-color 0.2s ease;
   text-decoration: none;
+  border-radius: 0.25rem;
+  font-family: 'NHaasGroteskDSStd-55Rg', sans-serif;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
 }
 
 .button:hover {
-  background-color: #3a2222;
-  text-decoration: none;
+  background-color: #6B3F3F;
 }
 
-/* Remove underlines from all links */
-.wrapper a {
-  text-decoration: none;
+.author {
+  font-family: 'NHaasGroteskDSStd-55Rg', sans-serif;
+  font-size: 0.875rem;
+  color: #4A2B2B;
+  margin-top: auto;
+  font-style: italic;
 }
 
 @media (max-width: 768px) {
-  .wrapper {
+  .grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
   }
 
-  .content {
-    padding: 0 1rem;
+  .imageWrapper {
+    min-height: 400px;
+  }
+
+  .contentColumn {
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
   }
 } 

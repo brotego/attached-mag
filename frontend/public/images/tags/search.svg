@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 579 318">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        fill: #fff;
+        font-family: Helvetica, Helvetica;
+        font-size: 98.5px;
+      }
+
+      .cls-3 {
+        fill: #231f20;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" y="0" width="578.11" height="317.64"/>
+  <rect class="cls-3" y="0" width="578.11" height="318" rx="62.85" ry="62.85"/>
+  <text class="cls-2" transform="translate(80.38 195.68)"><tspan x="0" y="0">SEARCH</tspan></text>
+</svg>

@@ -4,12 +4,28 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-rgb: 245, 245, 245;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: #F5F5F5;
+  background: rgb(var(--background-start-rgb));
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FFF9F4;
   min-height: 100vh;
   overflow-x: hidden;
 }
@@ -18,4 +34,45 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+/* Category-specific font classes */
+.style .title,
+.style h1,
+.style h2,
+.style h3,
+.style .heading {
+  font-family: 'DearCamille Vector', sans-serif !important;
+}
+
+.news .title,
+.news h1,
+.news h2,
+.news h3,
+.news .heading {
+  font-family: 'HandAndHeart-Script', sans-serif !important;
+}
+
+.fiction .title,
+.fiction h1,
+.fiction h2,
+.fiction h3,
+.fiction .heading {
+  font-family: 'Tarot', sans-serif !important;
+}
+
+.review .title,
+.review h1,
+.review h2,
+.review h3,
+.review .heading {
+  font-family: 'TheFoxDen', sans-serif !important;
+}
+
+.culture .title,
+.culture h1,
+.culture h2,
+.culture h3,
+.culture .heading {
+  font-family: 'irishand-regular', sans-serif !important;
 }

@@ -1,13 +1,16 @@
 .tag {
-  position: relative;
+  position: absolute;
+  top: 1.4rem;
+  left: 1rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  z-index: 2;
+  transform: rotate(-20deg);
 }
 
 .tagImage {
-  width: 80px;
-  height: 30px;
+  max-width: 80px;
   object-fit: contain;
 }
 

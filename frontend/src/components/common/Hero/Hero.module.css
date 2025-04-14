@@ -1,60 +1,103 @@
 .hero {
   position: relative;
-  width: 100%;
-  height: 100vh;
-  min-height: 600px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  color: white;
+  width: 98%;
+  height: 95vh;
   overflow: hidden;
+  margin: 2rem auto 1rem auto;
+}
+
+.heroLink {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.backgroundImage {
+  object-fit: cover;
+  border-radius: 4px;
 }
 
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.4);
-  z-index: 1;
-}
-
-.backgroundImage {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  z-index: 0;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .content {
-  position: relative;
-  z-index: 2;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   padding: 2rem;
-  margin-bottom: 2rem;
+  color: white;
+  z-index: 1;
 }
 
 .title {
   font-size: 6rem;
-  line-height: 1;
   margin-bottom: 1rem;
-  color: white;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-  -webkit-text-stroke: 2px white;
-  text-decoration: none;
+  font-weight: bold;
+  font-family: 'TheStockholmFont', sans-serif;
 }
 
 .description {
-  font-family: 'NHaasGroteskDSStd-55Rg', sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-size: 1.5rem;
   max-width: 800px;
-  color: white;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-  text-decoration: none;
+  font-family: 'NHaasGroteskDSStd-55Rg', sans-serif;
+}
+
+/* Category-specific styles */
+.style .title {
+  font-family: 'TheStockholmFont', sans-serif !important;
+}
+
+.news .title {
+  font-family: 'TheStockholmFont', sans-serif !important;
+}
+
+.fiction .title {
+  font-family: 'TheStockholmFont', sans-serif !important;
+}
+
+.review .title {
+  font-family: 'TheStockholmFont', sans-serif !important;
+}
+
+.culture .title {
+  font-family: 'TheStockholmFont', sans-serif !important;
+}
+
+/* Default font for when category is not specified */
+.title {
+  font-family: 'TheStockholmFont', sans-serif;
+}
+
+.tag {
+  position: absolute;
+  top: 1.4rem;
+  left: 1rem;
+  z-index: 2;
+  max-width: 60px;
+  height: auto;
+  transform: rotate(-20deg);
+  pointer-events: none;
+}
+
+.tagImage {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 /* Remove underlines from all links */
@@ -64,15 +107,18 @@
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 400px;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    height: 50vh;
+    width: 92%;
   }
-
-  .title {
-    font-size: 3rem;
-    -webkit-text-stroke: 1px white;
-  }
-
-  .description {
-    font-size: 0.9rem;
+.title{
+  font-size: 3rem;
+}
+.description{
+  font-size: .8rem;
+}
+  .content {
+    padding: 2rem;
   }
 } 

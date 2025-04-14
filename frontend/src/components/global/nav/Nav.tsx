@@ -38,9 +38,9 @@ const Nav: React.FC = () => {
 
         {/* Search */}
         <li className={styles.menuItem}>
-          <Link href="/search?entry=false" className={styles.searchLink}>
-            <span>SEARCH</span>
-            <span className={styles.searchIcon}>
+          <div className={styles.searchContainer}>
+            <input type="text" placeholder="SEARCH" className={styles.searchInput} />
+            <button className={styles.searchButton}>
               <svg
                 width="24"
                 height="24"
@@ -53,8 +53,8 @@ const Nav: React.FC = () => {
                   fill="currentColor"
                 />
               </svg>
-            </span>
-          </Link>
+            </button>
+          </div>
         </li>
       </ul>
     </nav>

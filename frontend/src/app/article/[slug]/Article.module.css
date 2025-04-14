@@ -2,6 +2,9 @@
   width: 100%;
   max-width: 100vw;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* Category-specific article backgrounds and text colors */
@@ -30,181 +33,94 @@
   color: white;
 }
 
-/* Category-specific title colors - matching the text color */
-.news .title {
-  color: black;
+/* Category-specific title and quote styles with maximum specificity */
+.articleWrapper.news .title,
+.articleWrapper.news .quote,
+.articleWrapper.news blockquote {
+  font-family: 'HandAndHeart-Script', sans-serif !important;
 }
 
-.culture .title {
-  color: #6B2238;
+.articleWrapper.culture .title,
+.articleWrapper.culture .quote,
+.articleWrapper.culture blockquote {
+  font-family: 'irishand-regular', sans-serif !important;
 }
 
-.review .title {
-  color: #6B2238;
+.articleWrapper.fiction .title,
+.articleWrapper.fiction .quote,
+.articleWrapper.fiction blockquote {
+  font-family: 'Tarot', sans-serif !important;
 }
 
-.fiction .title {
-  color: #E8E786;
+.articleWrapper.review .title,
+.articleWrapper.review .quote,
+.articleWrapper.review blockquote {
+  font-family: 'TheFoxDen', sans-serif !important;
 }
 
-.style .title {
-  color: white;
+.articleWrapper.style .title,
+.articleWrapper.style .quote,
+.articleWrapper.style blockquote {
+  font-family: 'DearCamille Vector', sans-serif !important;
 }
 
-/* Category-specific quote styles */
-.news .quoteContainer {
-  background-color: black;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding: 4rem 0;
-}
-
-.news .quote {
-  color: #F9EEE5;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.culture .quoteContainer {
-  background-color: #6B2238;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding: 4rem 0;
-}
-
-.culture .quote {
-  color: #E8E786;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.review .quoteContainer {
-  background-color: #6B2238;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding: 4rem 0;
-}
-
-.review .quote {
-  color: #B7D9FE;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.fiction .quoteContainer {
-  background-color: #E8E786;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding: 4rem 0;
-}
-
-.fiction .quote {
-  color: #6B2238;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-.style .quoteContainer {
-  background-color: #F9EEE5;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
-  padding: 4rem 0;
-}
-
-.style .quote {
-  color: black;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 0 2rem;
-}
-
-/* Make sure quote authors match quote colors */
-.news .quoteAuthor {
-  color: #F9EEE5;
-}
-
-.culture .quoteAuthor {
-  color: #E8E786;
-}
-
-.review .quoteAuthor {
-  color: #B7D9FE;
-}
-
-.fiction .quoteAuthor {
-  color: #6B2238;
-}
-
-.style .quoteAuthor {
-  color: black;
-}
-
-.header {
-  text-align: center;
-  padding-top: 4rem;
-  padding-bottom: 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
+/* Base styles */
 .title {
   font-size: 4.5rem;
   line-height: 1.1;
-  margin-bottom: 4rem;
-  font-weight: 300;
-}
-
-.author {
-  font-family: 'ApfelGrotezk-Regular', sans-serif;
-  font-size: 0.875rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-}
-
-.heroContainer {
-  position: relative;
-  width: 100%;
-  height: 90vh;
-  min-height: 600px;
   margin-bottom: 2rem;
+  font-weight: 300;
+  text-align: center;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
 }
 
-.heroImage {
-  object-fit: cover;
+.quote {
+  font-size: 4rem;
+  line-height: 1.4;
+  text-align: center;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  position: relative;
+  max-width: 1200px;
+  font-family: 'NHaasGroteskDSStd-55Rg', sans-serif;
 }
 
-.tag {
-  position: absolute;
-  top: 3rem;
-  left: 2rem;
-  z-index: 2;
-  width: 150px;
-  height: auto;
-  transform: rotate(-20deg);
+.quoteContainer {
+  width: 100vw;
+  margin: 2rem -50vw;
+  margin-left: calc(-50vw + 0px);
+  position: relative;
+  left: 50%;
+  right: 50%;
+}
+
+/* Category-specific quote backgrounds - inverted colors from article */
+.articleWrapper.news .quoteContainer {
+  background-color: black;
+  color: #F9EEE5;
+}
+
+.articleWrapper.culture .quoteContainer {
+  background-color: #6B2238;
+  color: #E8E786;
+}
+
+.articleWrapper.review .quoteContainer {
+  background-color: #6B2238;
+  color: #B7D9FE;
+}
+
+.articleWrapper.fiction .quoteContainer {
+  background-color: #E8E786;
+  color: #6B2238;
+}
+
+.articleWrapper.style .quoteContainer {
+  background-color: white;
+  color: black;
 }
 
 .content {
@@ -216,14 +132,58 @@
   line-height: 1.8;
 }
 
-.quote {
-  font-family: 'NHaasGroteskDSStd-55Rg', sans-serif;
-  font-size: 4rem;
-  line-height: 1.4;
+.header {
   text-align: center;
-  margin: 0;
-  padding: 2rem 0;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.date {
+  font-family: 'ApfelGrotezk-Regular', sans-serif;
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.author {
+  font-family: 'ApfelGrotezk-Regular', sans-serif;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+.heroContainer {
   position: relative;
+  width: 98%;
+  height: 91.5vh;
+  min-height: 600px;
+  margin: 3.5rem auto 0rem auto;
+}
+
+.heroImage {
+  object-fit: cover;
+}
+
+.tag {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 2;
+  width: 150px;
+  height: auto;
+  transform: rotate(-20deg);
+}
+
+.paragraph {
+  margin-bottom: 1.5rem;
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
 }
 
 .mediaContainer {
@@ -263,30 +223,4 @@
   .style .quote {
     padding: 0 1rem;
   }
-}
-
-/* Category-specific title and quote styles */
-.culture .title,
-.culture .quote {
-  font-family: 'PinyonScript', cursive;
-}
-
-.fiction .title,
-.fiction .quote {
-  font-family: 'HomemadeApple', cursive;
-}
-
-.news .title,
-.news .quote {
-  font-family: 'Fox21', sans-serif;
-}
-
-.review .title,
-.review .quote {
-  font-family: 'NewHeterodoxMono', monospace;
-}
-
-.style .title,
-.style .quote {
-  font-family: 'Aujournuit', sans-serif;
 } 

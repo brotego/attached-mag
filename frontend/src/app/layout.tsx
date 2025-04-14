@@ -1,35 +1,25 @@
-import type { Metadata } from "next";
 import "./globals.css";
 import "./fonts.css";
-import Nav from "@/components/global/nav/Nav";
 import NavHorizontal from "@/components/global/nav/NavHorizontal";
-import Footer from "@/components/global/footer/Footer";
+import { FooterContainer } from "@/components/common/Footer/FooterContainer";
+import { metadata } from "./metadata";
 
-export const metadata: Metadata = {
-  title: "Attached Magazine",
-  description: "A magazine for the modern age",
-  icons: {
-    icon: '/favicon.svg',
-  },
-};
+export { metadata };
 
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  // You can toggle between Nav and NavHorizontal here
-  const NavigationComponent = NavHorizontal; // Change to Nav for vertical navigation
-
   return (
     <html lang="en">
-      <body>
-        <NavigationComponent />
-        <div className="min-h-screen flex flex-col">
-          <main className="flex-grow">
+      <body className="bg-[#efe8e0]">
+        <NavHorizontal />
+        <div className="flex flex-col pt-16">
+          <main>
             {children}
           </main>
-          <Footer />
+          <FooterContainer />
         </div>
       </body>
     </html>

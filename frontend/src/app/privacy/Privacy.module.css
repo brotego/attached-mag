@@ -1,0 +1,59 @@
+.container {
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 0 2rem;
+  color: black;
+  margin-top: 5rem;
+}
+
+.title {
+  font-family: 'TheStockholmFont', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: black;
+}
+
+.content {
+  font-family: 'Helvetica Neue', sans-serif;
+  line-height: 1.6;
+  color: black;
+}
+
+.section {
+  margin-bottom: 2.5rem;
+}
+
+.section h2 {
+  font-family: 'Aujournuit', serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.section p {
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.section ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.section li {
+  margin-bottom: 0.5rem;
+  color: black;
+}
+
+.section a {
+  color: black;
+  text-decoration: underline;
+  transition: opacity 0.2s ease;
+}
+
+.section a:hover {
+  opacity: 0.7;
+} 
